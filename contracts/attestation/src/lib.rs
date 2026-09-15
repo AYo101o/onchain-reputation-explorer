@@ -50,4 +50,12 @@ impl AttestationContract {
         list.push_back(attestation);
         env.storage().persistent().set(&key, &list);
     }
+
+    pub fn get_attestations(env: Env, subject: Address) -> Vec<Attestation> {
+        let key = DataKey::Attestations(subject);
+        env.storage()
+            .persistent()
+            .get(&key)
+            .unwrap_or(Vec::new(&env))
+    }
 }
