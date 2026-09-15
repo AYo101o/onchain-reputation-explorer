@@ -1,14 +1,15 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+#![no_std]
+use soroban_sdk::{contract, contracttype, Address, Bytes, Env, Symbol};
+
+#[contracttype]
+#[derive(Clone)]
+pub struct Attestation {
+    pub issuer: Address,
+    pub subject: Address,
+    pub schema_id: Symbol,
+    pub data: Bytes,
+    pub timestamp: u64,
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+#[contract]
+pub struct AttestationContract;
