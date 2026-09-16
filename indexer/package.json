@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node src/server.ts",
     "migrate": "ts-node src/migrate.ts",
     "listen": "ts-node src/listener.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
