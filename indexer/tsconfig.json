@@ -23,8 +23,8 @@
     "exactOptionalPropertyTypes": true,
 
     "esModuleInterop": true,
-    "moduleResolution": "bundler",
-
+    "moduleResolution": "node",
+    "ignoreDeprecations": "5.0",
     // Style Options
     // "noImplicitReturns": true,
     // "noImplicitOverride": true,

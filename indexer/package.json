@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "migrate": "ts-node src/migrate.ts",
+    "listen": "ts-node src/listener.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +13,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@stellar/stellar-sdk": "^17.1.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "pg": "^8.23.0"
